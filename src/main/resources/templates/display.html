@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Shirts</title>
+
+<link rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}" />
+
+</head>
+
+<body>
+
+<form action="/summary" method="post">
+
+
+		<main role="main" class="container">
+
+		<div class="starter-template">
+
+			<h2>
+				<span th:text="${type}"></span>
+
+			</h2>
+		</div>
+
+		<tr th:each="prod : ${message}">
+			<td th:text="${prod.brand.brandName}"></td>
+			<td th:text="${prod.description}"></td>
+			<td th:text="${prod.type}"></td>
+			<td th:text="${prod.price}"></td>
+			<td th:text="${prod.color}"></td>
+			<td th:text="${prod.size}"></td>
+			<td th:text="${prod.sku}"></td>
+			<td th:text="${prod.seller.sellerName}"></td>
+			<br>
+		</tr>
+
+
+		<tr th:each="instance : ${groupBy}">
+			<td th:text="${instance.key}"></td>
+			<td th:text="${instance.value}"></td>
+			<br>
+		</tr>
+
+		<tr><br>
+			<td>Back to Summary</td>
+			<td><button type="submit" name="summary">Summary</button></td>
+			<br>
+
+		</tr>
+
+
+		</main>
+		<!-- /.container -->
+
+		<script type="text/javascript"
+			th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+	</form>
+</body>
+</html>
