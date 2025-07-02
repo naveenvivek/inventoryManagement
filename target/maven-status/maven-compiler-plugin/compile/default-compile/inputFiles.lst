@@ -1,0 +1,13 @@
+/app/src/main/java/com/inventory/catalog/controller/GroupByController.java
+/app/src/main/java/com/inventory/catalog/repository/BrandRepository.java
+/app/src/main/java/com/inventory/catalog/Application.java
+/app/src/main/java/com/inventory/catalog/bean/Product.java
+/app/src/main/java/com/inventory/catalog/repository/ShirtRepository.java
+/app/src/main/java/com/inventory/catalog/repository/SockRepository.java
+/app/src/main/java/com/inventory/catalog/bean/Brand.java
+/app/src/main/java/com/inventory/catalog/repository/CapRepository.java
+/app/src/main/java/com/inventory/catalog/controller/MainController.java
+/app/src/main/java/com/inventory/catalog/bean/ProductCategory.java
+/app/src/main/java/com/inventory/catalog/bean/Seller.java
+/app/src/main/java/com/inventory/catalog/repository/PantRepository.java
+/app/src/main/java/com/inventory/catalog/repository/SellerRepository.java

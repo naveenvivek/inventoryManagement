@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.inventory.catalog.bean.Brand;
+import com.inventory.catalog.bean.MapEntry;
 import com.inventory.catalog.bean.Product;
 import com.inventory.catalog.bean.Seller;
 import com.inventory.catalog.repository.BrandRepository;
@@ -50,9 +51,13 @@ public class GroupByController {
 		
 		Map<String, Long> mapGroupByBrand = responseStr.stream().collect(Collectors.groupingBy(obj -> obj.getBrand().getBrandName(), Collectors.counting()));
 		
+		List<MapEntry> groupByBrandList = mapGroupByBrand.entrySet().stream()
+				.map(entry -> new MapEntry(entry.getKey(), entry.getValue()))
+				.collect(Collectors.toList());
+
 		model.addAttribute("type", "groupByBrand");
 
-		model.addAttribute("groupBy", mapGroupByBrand);
+		model.addAttribute("groupBy", groupByBrandList);
 
 		return "display";
 	}
