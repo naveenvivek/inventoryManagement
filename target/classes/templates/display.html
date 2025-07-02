@@ -40,9 +40,9 @@
 		</tr>
 
 
-		<tr th:each="entry : ${groupBy}">
-			<td th:text="${entry.getKey()}"></td>
-			<td th:text="${entry.getValue()}"></td>
+		<tr th:each="instance : ${groupBy}">
+			<td th:text="${instance.key}"></td>
+			<td th:text="${instance.value}"></td>
 			<br>
 		</tr>
 

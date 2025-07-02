@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Shirts</title>
+
+<link rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}" />
+
+</head>
+
+<body>
+	<form method="post" onsubmit="myFunction()">
+
+
+		<main role="main" class="container">
+
+		<div class="starter-template">
+
+			<h2>
+				<span>Summary </span>
+
+			</h2>
+		</div>
+
+		<tr>
+			<td>Group by Brand</td>
+			<td><button type="submit" formaction="/groupByBrand"
+					name="groupByBrand">Group Brand</button></td>
+			<br>
+			<br>
+
+			<td>Group by Price</td>
+			<td><button type="submit" formaction="/groupByPrice"
+					name="groupByPrice">Group Price</button></td>
+			<br>
+			<br>
+
+			<td>Group by Color</td>
+			<td><button type="submit" formaction="/groupByColor"
+					name="groupByColor">Group Color</button></td>
+			<br>
+			<br>
+
+			<td>Group by Size</td>
+			<td><button type="submit" formaction="/groupBySize"
+					name="groupBySize">Group Size</button></td>
+			<br>
+			<br>
+
+
+
+			<td>Get by SKU</td>
+			<td><button type="submit" formaction="/getBySku" name="getBySku">Get
+					Sku</button></td>
+			<br>
+			<br>
+
+
+			<td>Available number of product by seller</td>
+			<td><button type="submit" formaction="/getBySku" name="getBySku">Available
+					number of product by seller</button></td>
+			<br>
+			<br>
+
+		</tr>
+
+
+
+
+		</main>
+
+
+	</form>
+
+
+	<script>
+		/* function myFunction() {
+			alert("hi");
+			document.getElementById("group_by").action = "groupByBrand";
+			document.getElementById("group_by").submit();
+
+		} */
+	</script>
+</body>
+</html>
